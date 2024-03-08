@@ -46,9 +46,9 @@ func main() {
 
 	router := gin.Default()
 	router.GET("/persons", controllers.GetAllPerson)
-	router.POST("persons", controllers.InsertPerson)
-	router.PUT("persons/:id", controllers.UpdatePerson)
-	router.DELETE("persons/:id", controllers.DeletePerson)
+	router.POST("/persons", controllers.InsertPerson)
+	router.PUT("/persons/:id", controllers.UpdatePerson)
+	router.DELETE("/persons/:id", controllers.DeletePerson)
 
 	router.Run(":" + os.Getenv("PORT"))
 
